@@ -1,0 +1,19 @@
+{
+  "name": "mimo-chinese-thinking",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MiMo Code file hook: force the model to think (reasoning) in Chinese for every session. 强制模型思考（推理）过程使用中文。",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild src/chinese-thinking.ts --bundle --minify --format=esm --target=es2022 --outfile=dist/chinese-thinking.min.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node test/smoke.mjs"
+  },
+  "devDependencies": {
+    "@mimo-ai/plugin": "^0.1.1",
+    "@types/node": "^26.6.5",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.8.2"
+  }
+}
